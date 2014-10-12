@@ -65,7 +65,7 @@ eventSearch.controller("eventSearchCtrl", function ($scope, EventService) {
 eventSearch.controller("budgetCtrl", function ($scope, EventService) {
     $scope.plan = function (budget) {
         console.log("Planing budget: " + budget);
-        EventService.planBudget(budget).then(function (budget) {
+        EventService.planBudget(parseInt(budget)).then(function (budget) {
             $scope.budget = budget;
         })
     }
